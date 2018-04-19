@@ -3,5 +3,7 @@ package com.pethotel.enums;
 public enum Role {
 
     ADMIN,
-    USER
+    USER,
+    HOTEL,
+    OWNER
 }
