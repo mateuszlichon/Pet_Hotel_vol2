@@ -19,6 +19,7 @@ import org.springframework.security.oauth2.provider.token.store.JdbcTokenStore;
 import org.springframework.validation.beanvalidation.LocalValidatorFactoryBean;
 
 import com.pethotel.config.AppConfig;
+import com.pethotel.entity.wrapper.CustomUserDetails;
 //import com.pethotel.entity.wrapper.CustomUserDetails;
 //import com.pethotel.repository.UserAccountRepository;
 import com.pethotel.repository.UserAccountRepository;
