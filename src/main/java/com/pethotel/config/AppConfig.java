@@ -21,6 +21,7 @@ import org.springframework.validation.beanvalidation.LocalValidatorFactoryBean;
 import com.pethotel.config.AppConfig;
 //import com.pethotel.entity.wrapper.CustomUserDetails;
 //import com.pethotel.repository.UserAccountRepository;
+import com.pethotel.repository.UserAccountRepository;
 
 @SpringBootApplication
 @ComponentScan(basePackages = {"com.pethotel"})
