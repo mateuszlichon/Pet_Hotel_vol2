@@ -34,7 +34,7 @@ public class JpaConfig {
     public LocalContainerEntityManagerFactoryBean entityManagerFactory(EntityManagerFactoryBuilder builder, DataSource dataSource, Environment env) {
         return builder
                 .dataSource(dataSource)
-                .packages("com.pollapp.entity")
+                .packages("com.pethotel.entity")
                 .properties(jpaProperties(env))
                 .build();
     }
