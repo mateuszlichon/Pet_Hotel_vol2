@@ -39,7 +39,7 @@ public class UserAccount {
     @JoinColumn(name = "role_id")
     private UserRole userRole;
 
-    @JsonBackReference
+/*    @JsonBackReference
     @OneToOne(fetch = FetchType.EAGER, cascade = CascadeType.MERGE)
     @JoinColumn(name = "data_id")
     @MapsId
@@ -47,7 +47,7 @@ public class UserAccount {
 
     public UserAccount() {
         userData = new UserData();
-    }
+    }*/
 
     public long getId() {
         return id;
@@ -89,13 +89,13 @@ public class UserAccount {
         this.userRole = userRole;
     }
 
-    public UserData getUserData() {
+/*    public UserData getUserData() {
         return userData;
     }
 
     public void setUserData(UserData userData) {
         this.userData = userData;
-    }
+    }*/
 
     public String getPasswordConfirmation() {
         return passwordConfirmation;
