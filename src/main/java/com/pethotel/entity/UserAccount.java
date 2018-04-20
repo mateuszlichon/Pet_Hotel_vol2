@@ -1,11 +1,14 @@
 package com.pethotel.entity;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.MapsId;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 import javax.persistence.Transient;
 import javax.validation.constraints.Size;
@@ -14,6 +17,7 @@ import org.hibernate.validator.constraints.Email;
 import org.hibernate.validator.constraints.NotBlank;
 import org.hibernate.validator.constraints.NotEmpty;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
@@ -46,7 +50,7 @@ public class UserAccount {
     @JoinColumn(name = "role_id")
     private UserRole userRole;
 
-/*    @JsonBackReference
+    @JsonBackReference
     @OneToOne(fetch = FetchType.EAGER, cascade = CascadeType.MERGE)
     @JoinColumn(name = "data_id")
     @MapsId
@@ -54,7 +58,7 @@ public class UserAccount {
 
     public UserAccount() {
         userData = new UserData();
-    }*/
+    }
 
     public long getId() {
         return id;
@@ -96,13 +100,13 @@ public class UserAccount {
         this.userRole = userRole;
     }
 
-/*    public UserData getUserData() {
+    public UserData getUserData() {
         return userData;
     }
 
     public void setUserData(UserData userData) {
         this.userData = userData;
-    }*/
+    }
 
     public String getPasswordConfirmation() {
         return passwordConfirmation;

@@ -12,16 +12,12 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
-//import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.oauth2.provider.token.TokenStore;
 import org.springframework.security.oauth2.provider.token.store.JdbcTokenStore;
 import org.springframework.validation.beanvalidation.LocalValidatorFactoryBean;
 
-import com.pethotel.config.AppConfig;
 import com.pethotel.entity.wrapper.CustomUserDetails;
-//import com.pethotel.entity.wrapper.CustomUserDetails;
-//import com.pethotel.repository.UserAccountRepository;
 import com.pethotel.repository.UserAccountRepository;
 
 @SpringBootApplication
