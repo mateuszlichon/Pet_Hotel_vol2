@@ -24,18 +24,9 @@ public class UserData {
 
     private String lastName;
 
-/*    @Enumerated(EnumType.STRING)
-    private Gender gender;*/
-
     @JsonManagedReference
     @OneToOne(fetch = FetchType.EAGER, mappedBy = "userData")
     private UserAccount userAccount;
-
-/*    @JsonIgnore
-    @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.MERGE)
-    @JoinTable(joinColumns = {@JoinColumn(name = "data_id")}, inverseJoinColumns = {
-            @JoinColumn(name = "answer_id")})
-    private Set<Answer> answers;*/
 
     public UserData() {
 //        answers = new HashSet<>();
@@ -81,14 +72,6 @@ public class UserData {
         this.lastName = lastName;
     }
 
-/*    public Gender getGender() {
-        return gender;
-    }
-
-    public void setGender(Gender gender) {
-        this.gender = gender;
-    }*/
-
     public UserAccount getUserAccount() {
         return userAccount;
     }
@@ -97,11 +80,4 @@ public class UserData {
         this.userAccount = userAccount;
     }
 
-/*    public Set<Answer> getAnswers() {
-        return answers;
-    }
-
-    public void setAnswers(Set<Answer> answers) {
-        this.answers = answers;
-    }*/
 }
